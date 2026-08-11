@@ -1,5 +1,5 @@
 OAuth-JWT auth:
-    host: "https://gist.github.com"
+    host: "https://raw.githubusercontent.com"
     server: "https://api.github.com/6ex9one/pixelwatch"
     api-key: ""
 server:
