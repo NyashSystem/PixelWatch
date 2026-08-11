@@ -1,4 +1,4 @@
-# Включать ли веб-крючок discord
+# Включать ли веб-крючок discord // GitHub
 enabled: false
 webhook: ""
 embed-title: "**PixelWatchPA Alert**"
