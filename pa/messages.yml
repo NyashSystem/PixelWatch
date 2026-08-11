@@ -1,0 +1,87 @@
+# \u00BB is » (double >>), ANSI and UTF-8 interpret this differently... you may even see ? due to this
+prefix: "&cAC &f&8»&r"
+
+alerts-enabled: "%prefix% &6Оповещения включены!"
+alerts-disabled: "%prefix% &6Оповещения отключены!"
+verbose-enabled: "%prefix% &6Мгновенные уведомления Включены!"
+verbose-disabled: "%prefix% &6Уведомления по порогу Включены!"
+brands-enabled: "%prefix% &6Информация о клиенте Включена!"
+brands-disabled: "%prefix% &6Информация о клиенте Выключена!"
+client-brand-format: "%prefix% &6%player% присоединился, используя %brand%"
+console-specify-target: "%prefix% &6Вы должны указать цель в качестве консоли!"
+reloading: "%prefix% &7Перезагрузка конфигов..."
+reloaded: "%prefix% &6Конфиги Успешно Перезагружены!"
+reload-failed: "%prefix% &6Ошибка перезагрузки Конфигов."
+player-not-found: "%prefix% &6Игрок исключен или находится вне сети!"
+player-not-this-server: "%prefix% &6Игрок не находится на этом сервере!"
+sender-not-found: "%prefix% &6Вы не можете использовать эту команду, если у вас есть исключение!"
+spectate-return: "<click:run_command:/pwa stopspectating><hover:show_text:\"/pwa stopspectating\">\n%prefix% &fНажмите здесь, чтобы вернуться на предыдущее место\n</hover></click>"
+cannot-spectate-return: "%prefix% &6Вы можете сделать это только после наблюдения за игроком"
+cannot-run-on-self: "%prefix% &6Вы не можете использовать эту команду на себе!"
+setback-setted: "%prefix% &bsetback &fsetted for &b%target% &f(%time%ms)"
+setback-error: "%prefix% &cError! Maybe this player already setback'ed!"
+upload-log: "%prefix% &6Отладка была загружена на: %url%"
+upload-log-start: "%prefix% &6Загрузка журнала... пожалуйста, подождите"
+upload-log-not-found: "%prefix% &6Невозможно найти этот журнал"
+upload-log-upload-failure: "%prefix% &6Что-то пошло не так при загрузке этого журнала, смотрите консоль для получения дополнительной информации"
+disconnect:
+    timeout: "<lang:disconnect.timeout>"
+    closed: "<lang:disconnect.closed>"
+    error: "<red>An error occurred whilst processing packets. Please contact the administrators."
+    blacklisted-forge: "<red>Your forge version is blacklisted due to inbuilt reach hacks.<newline><gold>Versions affected: 1.18.2-1.19.3<newline><newline><red>Please see https://github.com/MinecraftForge/MinecraftForge/issues/9309."
+run-as-player: "%prefix% &cЭту команду могут использовать только игроки!"
+run-as-player-or-console: "%prefix% &cЭту команду могут использовать только игроки или консоль!"
+
+# Допустимые заполнители:
+# %prefix%
+# %player%
+# %check_name%
+# %description%
+# %experimental%
+# %vl% - нарушения
+# %verbose% - дополнительная информация от проверки, например, смещения, не все проверки добавляют информацию.
+alerts-format: "&cAC&8 » &6%player%&f возможно использует &e%check_name%%experimental%&f (x&c%vl%&f)&7 %verbose%"
+alerts-format-proxy: "&cAC&8 » &8[&6Proxy&8]&6%player%&f возможно использует &e%check_name%%experimental%&f (x&c%vl%&f)&7 %verbose%"
+experimental-symbol: "*"
+
+# Кликабельный никнейм игрока в алертах
+# ЛКМ - выполнить команды ниже, как судо консоли
+# %moderator% - ник модератора, который нажал
+# %player% - ник подозреваемого из алерта
+alerts-click-enabled: true
+alerts-click-hover: "&8[&6ЛКМ&8] &7ГМ3 + телепорт"
+alerts-click-commands:
+    - "sudo %moderator% gm 3"
+    - "sudo %moderator% teleport %player%"
+
+profile:
+    - "&7======================"
+    - "%prefix% &bПрофиль для &f%player%"
+    - "&bПинг: &f%ping%"
+    - "&bВерсия: &f%version%"
+    - "&bБренд клиента: &f%brand%"
+    - "&bГоризонтальная чувствительность: &f%h_sensitivity%%"
+    - "&bВертикальная чувствительность: &f%v_sensitivity%%"
+    - "&bFastMath Включено: &f%fast_math%"
+    - "&7======================"
+help:
+    - "&7======================"
+    - "/pwa alerts &f- &7Включить/выключить оповещения"
+    - "/pwa brands &f- &7Toggle brands"
+    - "/pwa profile <игрок> &f- &7Просмотреть информацию об игроке"
+    - "/pwa help &f- &7Просмотреть это сообщение помощи"
+    - "/pwa debug <игрок> &f- &7Вывод прогноза разработчика"
+    - "/pwa perf &f- &7Вывод производительности PixelWatchPA для разработчиков"
+    - "/pwa reload &f- &7Перезагружает конфигурацию"
+    - "/pwa spectate <игрок> &f- &7Наблюдать за игроком"
+    - "/pwa verbose &f- &7Показывает все флаги без буферов"
+    - "/pwa log [0-255] &f- &7Загружает журнал отладки для флагов предсказания"
+    - "/pwa history <player> [страница] &f- &7Показывает предыдущие предупреждения игрока"
+    - "&7======================"
+
+grim-history-load-failure: "%prefix% &cНе удалось загрузить подсистему истории! Проверьте консоль сервера на наличие ошибок."
+grim-history-disabled: "%prefix% &cПодсистема истории отключена!"
+# Valid placeholders: %prefix% %player% %page% %maxPages%
+grim-history-header: "%prefix% &fПоказ журналов для &6%player% (&f%page%&6/&f%maxPages%&f)"
+# Valid placeholders: %prefix% %pwa_version% %client_brand% %client_version% %server_version% %check% %vl% %verbose% %timeago% %server%
+grim-history-entry: "&a%player% &f&8»&r &fВозможно использовал &e%check% &f(x&c%vl%&f) &7%verbose% (&6%timeago% назад&7)"
