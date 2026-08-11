@@ -1,4 +1,4 @@
-# \u00BB is » (double >>), ANSI and UTF-8 interpret this differently... you may even see ? due to this
+# \u00BB is » (double >>), ANSI and UTF-8 interpret this differently... you may even see ? due to this // GitHub
 prefix: "&cAC &f&8»&r"
 
 alerts-enabled: "%prefix% &6Оповещения включены!"
