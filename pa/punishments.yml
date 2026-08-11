@@ -371,7 +371,7 @@ Punishments:
             - "Post"
             - "!PacketOrderB"
         commands:
-            - "10:5 [alert]"
+            - "10:10 [alert]"
             - "10:10 [log]"
             - "20:10 [webhook]"
             - "20:10 [proxy]"
