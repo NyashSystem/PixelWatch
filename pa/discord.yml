@@ -1,14 +1,12 @@
-# Включать ли веб-крючок discord // GitHub
+#discord-webhook telemetry // GitHub
 enabled: false
 webhook: ""
-embed-title: "**PixelWatchPA Alert**"
 embed-color: "#00FFFF"
-include-timestamp: true
 violation-content:
-    - "**Игрок**: %player%"
-    - "**Проверка**: %check%"
-    - "**Нарушения**: %violations%"
-    - "**Версия Клиента**: %version%"
-    - "**Бренд**: %brand%"
-    - "**Пинг**: %ping%"
-    - "**ТПС**: %tps%"
+  - "**Player**: %player%"
+  - "**Check**: %check%"
+  - "**Violations**: %violations%"
+  - "**Client Version**: %version%"
+  - "**Brand**: %brand%"
+  - "**Ping**: %ping%"
+  - "**TPS**: %tps%"
